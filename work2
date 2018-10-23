@@ -1,0 +1,12 @@
+clear;
+close;
+clc;
+
+fid=fopen('Untitled1.m');
+Z=textscan(fid,'%s','delimiter','\n');%将换行作为定界符
+num=length(Z{1});                     %总行数
+z=Z{1};
+fclose(fid);
+
+disp('总行数')
+disp(num)
