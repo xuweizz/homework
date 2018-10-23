@@ -9,4 +9,4 @@ Pumas are large, cat like animals, which are found in  american.
 When reports came into lundon zoo, they were not taken seriously.
 
 
-work2中完成检测work1中程序的总行数和注释行数
+work2中完成检测work1中程序的总行数
