@@ -1,0 +1,21 @@
+clear;
+close;
+clc;
+
+a=fopen('text.txt');                     %打开txt文件
+B=textscan(a,'%s','delimiter','.')       %将句号作为定界符
+sentences=length(B{1})                   %统计句子个数
+fclose(a);
+
+ch = fileread('text.txt');               %将txt文件内容读入字符串
+ch = reshape(strsplit(ch),[],1);         %将矩阵重组为列矩阵
+word=length(char(ch))                    %统计单词个数
+
+[n,~]=size(ch);
+m=0;
+for i=1:n                                %求每个单词的字符数
+    [~,temp]=size(ch{i,1});
+    m=m+temp;                            %将每个单词的字符数累加
+end
+disp('字符数 =')
+disp(m)
